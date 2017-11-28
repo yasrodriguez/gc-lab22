@@ -1,0 +1,34 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.gc.dto.UserDto" table="user"
+		schema="gccoffeeshop">
+
+		<id name="userId">
+			
+			<column name="userId" sql-type="int(10)"></column>
+		</id>
+
+		<property name="firstName">
+			<column name="firstName" sql-type="varchar(30)" length="30"></column>
+		</property>
+		<property name="lastName">
+			<column name="lastName" sql-type="varchar(30)" length="30"></column>
+		</property>
+		<property name="email">
+			<column name="email" sql-type="varchar(30)" length="30"></column>
+		</property>
+		<property name="phone">
+			<column name="phone" sql-type="char(12)" length="12"></column>
+		</property>
+		<property name="gender">
+			<column name="gender" sql-type="enum('M', 'F')"></column>
+		</property>
+		<property name="city">
+			<column name="city" sql-type="varchar(30)" length="30"></column>
+		</property>
+	</class>
+</hibernate-mapping>		
