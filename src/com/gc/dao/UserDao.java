@@ -7,5 +7,4 @@ public interface UserDao {
 
 	void insertUser(UserDto user);
 	
-	List<UserDto> listAll();
 }

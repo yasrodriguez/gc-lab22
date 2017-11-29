@@ -1,5 +1,7 @@
 package com.gc.controller;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,8 +9,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.gc.dao.ItemDao;
+import com.gc.dao.ItemDaoHibernate;
 import com.gc.dao.UserDao;
 import com.gc.dao.UserDaoHibernate;
+import com.gc.dto.ItemDto;
 import com.gc.dto.UserDto;
 
 /*
@@ -19,6 +24,16 @@ import com.gc.dto.UserDto;
 @Controller
 public class HomeController {
 
+	@RequestMapping("/")
+	public String listProducts(Model model) {
+		ItemDao itemDao = new ItemDaoHibernate();
+		List<ItemDto> itemList = itemDao.listAll();
+		
+		model.addAttribute("itemList", itemList);
+		
+		return "index";
+	}
+	
 	@RequestMapping("/register")
 	public String register() {
 		
