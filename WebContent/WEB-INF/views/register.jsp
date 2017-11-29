@@ -26,8 +26,8 @@
 <label>Phone:</label>
 <input type="tel" name="phone"><br>
 <label>Gender:</label><br>
-<input type="radio" name="gender" value="male">Male<br>
-<input type="radio" name="gender" value="female">Female<br>
+<input type="radio" name="gender" value="M">Male<br>
+<input type="radio" name="gender" value="F">Female<br>
 <label>City: </label><br>
 <select name="city">
 <option value="Ann Arbor">Ann Arbor</option>
@@ -36,7 +36,7 @@
 </select>
 <br>
 <label>Password:</label> 
-<input type="password" name="password"><br>
+<input type="password" name="userPassword"><br>
 <label>Mark all the types of drinks you like:</label> 
 <fieldset>
 <input type="checkbox" name="brewedCoffee" value="Brewed">Hot brewed coffee<br>

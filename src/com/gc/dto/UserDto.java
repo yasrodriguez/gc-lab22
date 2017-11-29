@@ -16,11 +16,28 @@ public class UserDto implements Serializable {
 	private ArrayList<String> favoriteDrinks;
 	
 	public UserDto() {
+		userId = 0;
 		firstName = "";
 		lastName = "";
 		email = "";
 		phone = "";
 		userPassword = "";
+		gender = "";
+		city = "";
+		favoriteDrinks = new ArrayList<>();
+	}
+	
+	public UserDto(String firstName, String lastName, String email, String phone, String userPassword,
+			String gender, String city) {
+		userId = 0;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.phone = phone;
+		this.userPassword = userPassword;
+		this.gender = gender;
+		this.city = city;
+		favoriteDrinks = new ArrayList<>();
 	}
 
 	public int getUserId() {
@@ -55,20 +72,20 @@ public class UserDto implements Serializable {
 		this.email = email;
 	}
 
-	public String getPhoneNumber() {
+	public String getPhone() {
 		return phone;
 	}
 
-	public void setPhoneNumber(String phoneNumber) {
-		this.phone = phoneNumber;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 
-	public String getPassword() {
+	public String getUserPassword() {
 		return userPassword;
 	}
 
-	public void setPassword(String password) {
-		this.userPassword = password;
+	public void setUserPassword(String userPassword) {
+		this.userPassword = userPassword;
 	}
 
 	public String getGender() {

@@ -16,7 +16,7 @@ $(function() {
         // by the built-in "email" rule
         email: true
       },
-      password: {
+      userPassword: {
         required: true,
         minlength: 5
       }
@@ -25,7 +25,7 @@ $(function() {
     messages: {
       firstName: "Please enter your firstname",
       lastName: "Please enter your lastname",
-      password: {
+      userPassword: {
         required: "Please provide a password",
         minlength: "Your password must be at least 5 characters long"
       },

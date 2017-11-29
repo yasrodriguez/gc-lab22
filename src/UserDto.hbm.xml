@@ -30,5 +30,8 @@
 		<property name="city">
 			<column name="city" sql-type="varchar(30)" length="30"></column>
 		</property>
+		<property name="userPassword">
+			<column name="userPassword" sql-type="varchar(30)" length="30"></column>
+		</property>
 	</class>
 </hibernate-mapping>		
